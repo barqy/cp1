@@ -29,8 +29,17 @@ pageWithSidebar(
 		        " You also trade-in your old car for 5,000$ to a dealer.",
 		        " Down payment and trade-in decrease your lease payment.",
 		        " Finally, the (annual) interest rate on the lease is 4%.",
-		        " Now, you can see the monthly fixed payment on the right side panel")
-		  )
+		        " Now, you can see the monthly fixed payment on the right side panel")),
+		h3("Source Code"),
+		p("Download sources from GitHub: https://github.com/barqy/cp1"),
+		h3("Local Installation"),
+		p(paste("It is easy to run the application on your desktop. ",
+		        " Simply download the sources from the GitHub. Change the working directory",
+		        " in RStudio to a local copy of the repository, then call runApp() command ",
+		        " in RStudio or R Gui.",
+		        " Also read readme.html file in the Git repo of this application.",
+		        " This app does not require any packages beyond Shiny and its pre-requisites.")
+		)
 	)
 )
 )
