@@ -32,12 +32,10 @@ pageWithSidebar(
 		        " Now, you can see the monthly fixed payment on the right side panel")),
 		h3("Source Code"),
 		p("Download sources from GitHub: https://github.com/barqy/cp1"),
-		h3("Local Installation"),
+		h3("Run from GitHub"),
 		p(paste("It is easy to run the application on your desktop. ",
-		        " Simply download the sources from the GitHub. Change the working directory",
-		        " in RStudio to a local copy of the repository, then call runApp() command ",
-		        " in RStudio or R Gui.",
-		        " Also read readme.html file in the Git repo of this application.",
+		        " Simply execute this command in RStudio or R Gui: ",
+		        " runGitHub( \"cp1\", \"barqy\").",
 		        " This app does not require any packages beyond Shiny and its pre-requisites.")
 		)
 	)
