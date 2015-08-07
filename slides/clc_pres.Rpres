@@ -1,0 +1,74 @@
+Car Lease Calculator App
+========================================================
+author: barqy
+date: 2015/8/6
+
+Sleek, Simple, Useful
+
+Planning to lease a car? Here's an app!
+========================================================
+
+ 
+- Calculate your monthly lease payment
+  + Trade-in old car
+  + Bring cash down payment
+  + Enter residual value
+- All in one simple, sleek screen
+
+
+***
+
+![main][1]
+
+[1]: fig/main.gif "Main Screen"
+
+Example
+========================================================
+left: 70% 
+```{r, results="hide",echo=FALSE}
+pmt <- function(rate,nper,pv,fv) round((pv-fv)*rate/(1-(1+rate)^(-nper)),2)
+r = 4
+t = 60
+p = 20000
+down = 2000
+trade = 5000
+res = 8000
+
+
+```
+- You want to lease a car for `r t/12` years
+- It costs $ `r format(p, digits=9, decimal.mark=",", big.mark=" ",small.mark=".", , small.interval=3)`
+- After `r t/12` years, you may keep the car if you pay $ `r format(res, digits=9, decimal.mark=",", big.mark=" ",small.mark=".", , small.interval=3)` more 
+- You bring $ `r format(down, digits=9, decimal.mark=",", big.mark=" ",small.mark=".", , small.interval=3)` cash to the table now
+- ... and trade-in your old car, which is worth $ `r format(trade, digits=9, decimal.mark=",", big.mark=" ",small.mark=".", , small.interval=3)`
+- The annual interest rate on a lease is `r r` %
+
+***
+
+![inputs][2]
+
+[2]: fig/inputs.gif "Contract Details"
+
+.. and your monthly lease payment is...
+========================================================
+The calculated monthly lease payment in dollars is
+```{r}
+pmt(r/100,t,p-down-trade,res)
+```
+
+as you can see on the right panel of the app screen:
+
+![output][3]
+
+[3]: fig/output.gif "Lease Payment"
+
+Documentation is on the same page
+========================================================
+
+- It is very easy to use, and its documentation is on the same page!
+
+***
+
+![docs][4]
+
+[4]: fig/docs.gif "Docs"
